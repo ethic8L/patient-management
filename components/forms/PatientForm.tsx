@@ -49,7 +49,7 @@ const PatientForm = () => {
 
         const user = createUser(userData);
 
-        if(user) router.push(`/patients/${user.id}/register`)
+        if(user) router.push(`/patients/${user}/register`)
     } catch (error) {
         console.log(error)
     }
@@ -59,16 +59,16 @@ const PatientForm = () => {
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6 flex-1">
         <section className="mb-12 space-y-4">
-            <h1 className="header">Hi there</h1>
-            <p className="text-dark-700">Schedule your first appointment</p>
+            <h1 className="header">Cześć</h1>
+            <p className="text-dark-700">Zaplanuj swoją pierwszą wizytę</p>
         </section>
 
         <CustomFormField 
             fieldType={FormFieldType.INPUT}
             control={form.control}
             name="name"
-            label="Full name"
-            placeholder="John Doe"
+            label="Pełne imię i nazwisko"
+            placeholder="Adam Nowicki"
             iconSrc="/assets/icons/user.svg"
             iconAlt="user"
         />
@@ -78,7 +78,7 @@ const PatientForm = () => {
             control={form.control}
             name="email"
             label="Email"
-            placeholder="johndoe@gmail.com"
+            placeholder="adamnowicki@gmail.com"
             iconSrc="/assets/icons/email.svg"
             iconAlt="email"
         />
@@ -87,7 +87,7 @@ const PatientForm = () => {
             fieldType={FormFieldType.PHONE_INPUT}
             control={form.control}
             name="phone"
-            label="Phone number"
+            label="Numer telefonu"
             placeholder="(123) 456-7890"
             iconSrc="/assets/icons/email.svg"
             iconAlt="email"
